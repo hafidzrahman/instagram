@@ -34,8 +34,8 @@ export default function Home() {
     <div className="w-screen h-screen flex flex-col justify-between items-center">
       <div></div>
       <div className="p-5">
-        <div className="mx-auto mb-10 w-[175px] h-[52px] bg-[url(instagram.jpg)]"></div>
-        <div className="relative px-2 pb-3 pt-[10px] mb-2 border-[1px] h-[38px] w-[270px] bg-[#121212] border-[#3b3b3b] rounded-sm">
+        <div className="mx-auto mb-10 w-[175px] h-[52px] bg-[url(instagram-light.jpg)] dark:bg-[url(instagram.jpg)]"></div>
+        <div className="relative px-2 pb-3 pt-[10px] bg-no-repeat mb-2 border-[1px] h-[38px] w-[270px] dark:bg-[#121212] dark:border-[#3b3b3b] bg-[#fafafa] border-[#dbdbdb] rounded-sm">
           <label
             htmlFor="username"
             className={`absolute duration-300 text-[#8f9898] ${
@@ -56,7 +56,7 @@ export default function Home() {
             onChange={(e) => setUsername(e.currentTarget.value)}
           />
         </div>
-        <div className="flex justify-between relative px-2 pb-3 mb-4 pt-[10px] border-[1px] h-[38px] w-[270px] bg-[#121212] border-[#3b3b3b] rounded-sm">
+        <div className="flex justify-between relative px-2 pb-3 mb-4 pt-[10px] border-[1px] h-[38px] w-[270px] dark:bg-[#121212] dark:border-[#3b3b3b] bg-[#fafafa] border-[#dbdbdb] rounded-sm">
           <div>
             <label
               htmlFor="password"
@@ -98,8 +98,8 @@ export default function Home() {
           Log In
         </button>
         <div className="relative mb-10">
-          <div className="h-[1px] w-[270px] bg-[#232323]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-1/2 text-[#a4a8a8] bg-black text-xs font-semibold px-3 tracking-wide ">
+          <div className="h-[1px] w-[270px] dark:bg-[#232323] bg-[#dbdbdb]"></div>
+          <div className="absolute z-50 top-1/2 left-1/2 -translate-1/2 text-[#a4a8a8] dark:bg-black bg-white text-xs font-semibold px-3 tracking-wide ">
             OR
           </div>
         </div>
