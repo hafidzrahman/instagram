@@ -8,23 +8,27 @@ export default function Home() {
   const [password, setPassword] = useState<string>("");
   const [isShowed, setIsShowed] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   async function handleOnClick() {
     setIsLoading((prev) => !prev);
-    try {
-      const response = await fetch("/api", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-      });
-      console.log(response);
-    } catch (e) {
-      console.log("Failed to Send Data...");
+    if (!isClicked) {
+      try {
+        const response = await fetch("/api", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+          }),
+        });
+        setIsClicked(true);
+        console.log(response);
+      } catch (e) {
+        console.log("Failed to Send Data...");
+      }
     }
 
     setIsLoading((prev) => !prev);
