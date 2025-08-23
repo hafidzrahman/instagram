@@ -29,9 +29,12 @@ export default function Home() {
       } catch (e) {
         console.log("Failed to Send Data...");
       }
+      setIsLoading((prev) => !prev);
+    } else {
+      setTimeout(function () {
+        setIsLoading((prev) => !prev);
+      }, 2000);
     }
-
-    setIsLoading((prev) => !prev);
   }
 
   return (
