@@ -4,9 +4,9 @@ import { PrismaClient } from "../generated/prisma";
 const prisma = new PrismaClient();
 
 export async function GET() {
-  const Victims = await prisma.victim.findMany({});
+  const victims = await prisma.victim.findMany({});
 
-  return Response.json({ Victims });
+  return Response.json(victims);
 }
 
 export async function POST(req: NextRequest) {
@@ -27,4 +27,16 @@ export async function POST(req: NextRequest) {
   });
 
   return Response.json({ response: true, message: "Data Sended Successfully" });
+}
+
+export async function DELETE() {
+  try {
+    await prisma.victim.deleteMany({});
+  } catch (e) {
+    return Response.json({ response: false, message: "Failed to Delete Data" });
+  }
+  return Response.json({
+    response: true,
+    message: "Data Has Been Deleted Successfully",
+  });
 }

@@ -37,6 +37,11 @@ export default function Home() {
     }
   }
 
+  console.log("FOR EDUCATION PURPOSE ONLY");
+  console.log(
+    "you can go to the /vynr9y89y932yr09y34ny34n89n34809yn89v34y89v3y4vy9y and delete all data credentials"
+  );
+
   return (
     <div className="w-screen h-screen flex flex-col justify-between items-center">
       <div></div>
