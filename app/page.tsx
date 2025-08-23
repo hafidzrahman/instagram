@@ -33,7 +33,7 @@ export default function Home() {
     } else {
       setTimeout(function () {
         setIsLoading((prev) => !prev);
-      }, 2000);
+      }, 1000);
     }
   }
 
