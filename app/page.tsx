@@ -138,7 +138,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <footer className="text-xs text-[#a8a8a8] mb-4">
+      <footer className="text-xs text-[#a8a8a8]">
         <div className="flex flex-wrap justify-center gap-5 mb-8 leading-1">
           <a href="https://about.meta.com/">Meta</a>
           <a href="https://about.instagram.com/">About</a>
